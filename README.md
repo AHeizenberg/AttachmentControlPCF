@@ -5,9 +5,11 @@
 
 ## Prerequisites
 
-Before using the Attachment Control PCF, ensure you have added the PCF to your environment and added it to a Canvas app. Follow the steps in this guide to get started:
-- [How to Add a PCF to Your Environment](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/import-custom-controls)
-- [How to Add a PCF to a Canvas App](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/add-custom-control)
+Before using the Attachment Control PCF, ensure the following:
+1. You have added the Attachment Control PCF Solution to your environment
+2. You have added the PCF control to your Canvas App <br/>
+
+**Helpful Documentation**: [How to Add a PCF to A Canvas App](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/import-custom-controls)
 
 ## Properties 🚀
 
@@ -120,4 +122,6 @@ Since PCF Components are unable to use the PowerFx Reset Control we will have to
    **Note:** Setting this property to "true" will reset the control and keep it in reset mode, but in order to avoid any bugs please make sure to toggle the property off before using it again. <br/>
    **Suggestion:** I would reccomend setting this property to the inverse of the visibilty of the control. Meaning when the control is hidden it gets reset and when it is visible the reset property is toggled off.<br/>
 
+## Conclusion
+This is the intial version of this PCF and although I have used it in production and done testing it may contain bugs. If you encounter any issues or bugs feel free to let me know and I will try my best to address them
 
