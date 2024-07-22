@@ -35,7 +35,7 @@ Before using the Attachment Control PCF, ensure you have added the PCF to your e
 ### Default Files
 
 - **Description:** This property allows makers to pass in default files that will be shown in the attachment control.
-- **NOTE:** Makers must set the appropriate input file type in order to ensure that the files are not getting mismatched. Default value is Base64 and I reccomed to leave that
+- **NOTE:** Makers must set the appropriate input file type in order to ensure that the files are not getting mismatched. Default value is Base64 and I reccomed to leave it like that
 - **Type:** Table
 - **Example:**
   ```PowerApps
@@ -88,9 +88,9 @@ FileContent : ThisItem.Value.content
 - **Example:** Triggering a flow that returns a file's name and content and storing the response in a collection
 ````PowerApps
 With(
-    {w_flowResponse: testingbinarydata.Run()},
+    {w_flowResponse: getFiles.Run()},
     ClearCollect(
-        col_files,
+        col_DefaultFiles,
         Table(
             {
                 FileName: w_flowResponse.filename,
@@ -109,7 +109,15 @@ Table(
   }
 )
 ````
-
-
 ### How to reset the PCF
 Since PCF Components are unable to use the PowerFx Reset Control we will have to use a toggle to "Reset" this PCF. 
+
+**Purpose:** The reason I have added a reset toggle is to provide makers the ability to "reset" this PCF to it's default state.
+**Default State:** The Default state of this PCF is one where all user uploaded files are cleared and any default provided files are kept or restored.
+**Uses:** 
+1. **Clear Files:** This property can be used to clear all files within the attachment control (given that the default files are empty)
+2. **Restore Default Files:** This property can restore all default files. This can be handy if makers use the attacment control as part of a form and want to restore changes <br/>
+   **Note:** Setting this property to "true" will reset the control and keep it in reset mode, but in order to avoid any bugs please make sure to toggle the property off before using it again. <br/>
+   **Suggestion:** I would reccomend setting this property to the inverse of the visibilty of the control. Meaning when the control is hidden it gets reset and when it is visible the reset property is toggled off.<br/>
+
+
