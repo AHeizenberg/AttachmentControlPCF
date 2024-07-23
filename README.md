@@ -1,18 +1,13 @@
 # PowerApps Attachment Control PCF 📁
 
 **Author:** Ahad Hamirani <br/>
-**Version:** 1.0.0.1
-
-## How to download this PCF
-In order to download this PCF navigate to the managed solution zip file attached to this repo and simply donwload it. 
-<br/>
-💡**Tip:** Press `Control + Shift + S` on Windows or `Command + Shift + S` on Mac to download the raw file
 
 ## Prerequisites
 
 Before using the Attachment Control PCF, ensure the following:
-1. You have added the Attachment Control PCF Solution to your environment
-2. You have added the PCF control to your Canvas App <br/>
+1. You have downloaded the latest released version of the PCF solution. [Download Solution](https://github.com/AHeizenberg/AttachmentControlPCF/releases/tag/v0.1.0)
+2. You have added the Attachment Control PCF Solution to your environment
+3. You have added the PCF control to your Canvas App <br/>
 
 **Helpful Documentation**: [How to Add a PCF to A Canvas App](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/import-custom-controls)
 
